@@ -5,6 +5,7 @@ const app = express();
 
 const { getPosts } = require("./routes/post");
 
+//Example - Custom Middleware
 // const customMiddleware = (req, res, next) => {
 //   console.log("Applying custom middleware");
 //   next();
@@ -12,7 +13,6 @@ const { getPosts } = require("./routes/post");
 // app.use(customMiddleware);
 
 app.use(morgan("dev")); // middleware
-
 
 app.get("/", getPosts);
 
