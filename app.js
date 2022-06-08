@@ -3,9 +3,9 @@ const morgan = require("morgan");
 
 const app = express();
 
-const { getPosts } = require("./routes/post");
+const postRoutes = require("./routes/post");
 
-//Example - Custom Middleware
+//Example - Custom Middlewares
 // const customMiddleware = (req, res, next) => {
 //   console.log("Applying custom middleware");
 //   next();
@@ -14,7 +14,7 @@ const { getPosts } = require("./routes/post");
 
 app.use(morgan("dev")); // middleware
 
-app.get("/", getPosts);
+app.use("/", postRoutes);
 
 const port = 3200;
 app.listen(port, () => {
