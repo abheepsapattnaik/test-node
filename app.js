@@ -5,6 +5,8 @@ const app = express();
 
 const postRoutes = require("./routes/post");
 
+
+
 //Example - Custom Middlewares
 // const customMiddleware = (req, res, next) => {
 //   console.log("Applying custom middleware");
